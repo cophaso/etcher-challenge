@@ -6,6 +6,13 @@ $(() => {
   createAndPlaceRows(8);
 
   // Bind your event listeners here:
+  $('.cell').on('mouseover', function() {
+    $(this).addClass('active');
+  })
+
+  $('.controls').on('click', 'button', function(){
+    $('.cell').removeClass('active');
+  })
 });
 
 
